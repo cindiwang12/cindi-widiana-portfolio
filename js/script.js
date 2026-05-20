@@ -42,3 +42,54 @@ const ro = new IntersectionObserver((entries)=>{
       );
     });
   });
+
+
+  const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.querySelector(".nav-links");
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
+    navLinks.classList.toggle("show");
+  });
+
+  // Tutup menu saat link diklik
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      menuToggle.classList.remove("active");
+      navLinks.classList.remove("show");
+    });
+  });
+
+  // Tutup menu saat klik di luar navbar
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("nav")) {
+      menuToggle.classList.remove("active");
+      navLinks.classList.remove("show");
+    }
+  });
+}
+
+
+// =========================================================
+// NAVBAR BLUR SAAT SCROLL
+// Tambahkan di bagian paling bawah file script.js
+// =========================================================
+
+const navbar = document.querySelector("nav");
+
+if (navbar) {
+  const handleNavbarScroll = () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  };
+
+  // Jalankan saat load
+  handleNavbarScroll();
+
+  // Jalankan saat scroll
+  window.addEventListener("scroll", handleNavbarScroll);
+}
