@@ -52,15 +52,15 @@ This website showcases my professional journey and portfolio, including:
 
 ## 🌐 Live Demo
 
-https://your-portfolio-link.netlify.app
+(https://cindi-widiana-portfolio.netlify.app/)
 
 ## 👤 Author
 
 **Cindi Widiana, S.Kom., Gr.**
 
 - GitHub: https://github.com/yourusername
-- Portfolio: https://your-portfolio-link.netlify.app
-- Email: your-email@example.com
+- Portfolio: https://cindi-widiana-portfolio.netlify.app/
+- Email: cindiwidiana15@gmail.com
 
 ## 📄 License
 
